@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Lesson8 {
+    static Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int sum = 0;
+
+        int i = 0;
+        while (i < 10) {
+            int n = scan.nextInt();
+            sum = sum + n;
+            i = i + 1;
+        }
+
+        System.out.println(sum / 10.0);
+    }
+
+    public static void question1() {
+        int n = scan.nextInt();
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);
+        }
+    }
+}
