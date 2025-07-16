@@ -1,9 +1,32 @@
 import java.util.Scanner;
 
-public class Lesson8 {
+public class Main {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
+        int countEven = 0;
+
+        System.out.println("Enter 20 integers:");
+
+        for (int i = 1; i <= 20; i++) {
+            System.out.print("Number " + i + ": ");
+            int num = scan.nextInt();
+            if (num % 2 == 0) {
+                countEven++;
+            }
+        }
+
+        System.out.println("Number of even numbers entered: " + countEven);
+    }
+
+    public static void question1() {
+        int n = scan.nextInt();
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public static void question2() {
         int sum = 0;
 
         int i = 0;
@@ -16,10 +39,26 @@ public class Lesson8 {
         System.out.println(sum / 10.0);
     }
 
-    public static void question1() {
-        int n = scan.nextInt();
-        for (int i = 0; i < n; i++) {
-            System.out.println(i);
+    public static void question4 {
+        int smallest = Integer.MAX_VALUE;
+        int largest = Integer.MIN_VALUE;
+
+        System.out.println("Enter 10 numbers:");
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Number " + i + ": ");
+            int number = scan.nextInt();
+
+            if (number < smallest) {
+                smallest = number;
+            }
+
+            if (number > largest) {
+                largest = number;
+            }
         }
+
+        System.out.println("Smallest number: " + smallest);
+        System.out.println("Largest number: " + largest);
     }
 }
