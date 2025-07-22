@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Lesson9 {
+    static Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int Sum = 0, Avg;
+        for (int i = 0; i < 10 ; i++) {
+            int Num = scan.nextInt();
+            Sum = Sum + Num;
+        }
+        Avg = Sum / 10;
+        System.out.println("Avg: " + Avg);
+    }
+
+    public static void qs1() {
+        int Num = scan.nextInt(), Sum = 0;
+        for (int i = 0; i < Num ; i++) {
+            Sum = Sum + i;
+        }
+        System.out.println("Sum: " + Sum);
+    }
+
+    public static void qs2() {
+        int CountEven = 0;
+        for (int i = 0; i < 20; i++) {
+            int Num = scan.nextInt();
+            if (Num % 2 == 0){
+                CountEven++;
+            }
+        }
+        System.out.println("Even numbers:" + CountEven);
+    }
+    // I tried teach, I really did, I Just don't know how to do the smallest and biggest number one. 💔
+}
