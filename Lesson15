@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class Main {
+    static Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.print("Enter a number!!");
+        int num = scan.nextInt();
+
+        if (isSymmetric(num)) {
+            System.out.println(num + " is symmetrical.");
+        } else {
+            System.out.println(num + " is not symmetrical.");
+        }
+    }
+
+    public static int getNumDigits(int num) {
+        int tmp = 0;
+        while (num != 0) {
+            tmp++;
+            num = num / 10;
+        }
+        return tmp;
+    }
+
+    public static boolean isSymmetric(int num) {
+        int digits = getNumDigits(num);
+        int d1, d2, d3, d4, d5;
+
+        if (digits == 1) {
+            return true;
+        }
+        if (digits == 2) {
+            d1 = num / 10;
+            d2 = num % 10;
+            return d1 == d2;
+        }
+        if (digits == 3) {
+            d1 = num / 100;
+            d2 = (num / 10) % 10;
+            d3 = num % 10;
+            return d1 == d3;
+        }
+        if (digits == 4) {
+            d1 = num / 1000;
+            d2 = (num / 100) % 10;
+            d3 = (num / 10) % 10;
+            d4 = num % 10;
+            return d1 == d4 && d2 == d3;
+        }
+        if (digits == 5) {
+            d1 = num / 10000;
+            d2 = (num / 1000) % 10;
+            d3 = (num / 100) % 10;
+            d4 = (num / 10) % 10;
+            d5 = num % 10;
+            return d1 == d5 && d2 == d4;
+        }
+
+        return false;
+    }
+}
