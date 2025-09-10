@@ -25,7 +25,7 @@ public class Main {
 
     public static boolean isSymmetric(int num) {
         int digits = getNumDigits(num);
-        int d1, d2, d3, d4, d5;
+        int d1, d2, d3, d4;
 
         if (digits == 1) {
             return true;
