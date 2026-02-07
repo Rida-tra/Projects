@@ -1,0 +1,56 @@
+package OOP;
+
+public class Calculator {
+    public int countDigits(int num){
+        int d, count=0;
+        d=num;
+        while (d != 0){
+            count++;
+            d = d / 10;
+        }
+
+        return count;
+    }
+
+    public boolean evenOdd(int num) {
+        int sumEven = 0, sumOdd = 0;
+        while (num > 0) {
+            int d = num % 10;
+            if (d % 2 == 0) {
+                sumEven += d;
+            } else {
+                sumOdd += d;
+            }
+            num /= 10;
+        }
+
+        return sumEven > sumOdd;
+    }
+
+    public int getLastDigit(int num){
+        int d;
+        d=num;
+        while (d > 9){
+            d = d / 10;
+        }
+
+        return d;
+    }
+
+    public int getDigit(int num, int k){
+        int d, count=0;
+        d=num;
+
+        for (int i = 0; i < k; i++) {
+            d = d / 10;
+        }
+        d = d % 10;
+
+        return d;
+    }
+
+    public int setDigit(int num, int k, int d){
+        int dd, ;
+        dd=num;
+    }
+}
